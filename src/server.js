@@ -6,6 +6,13 @@ const {
 	home
 	} = require('./pages.js')
 
+// Configura nunjucks (html render)
+const nunjucks = require('nunjucks')
+nunjucks.configure('src/views',{
+    express: server,
+    noCache: true,
+})
+
 // Inicio e configurações do servidor
 server
 // receber os dados do req.body
