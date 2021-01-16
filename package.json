@@ -4,7 +4,8 @@
   "description": "Aplicação desenvolvida na segunda edição do hackathon da ccr 2021",
   "main": "src/index.js",
   "scripts": {
-    "test": "node src/server.js"
+    "test": "node src/server.js",
+    "dev":"nodemon src/server.js"
   },
   "repository": {
     "type": "git",
