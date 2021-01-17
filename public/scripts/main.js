@@ -9,5 +9,5 @@ mentorBtn = document.querySelector("#mentor-btn");
 mentorLink = '/login'
 
 mentorBtn.addEventListener("click", () =>{
-    window.location.href = loginLink
+    window.location.href = mentorLink
 })
