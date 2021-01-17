@@ -31,4 +31,4 @@ function getMentores() {
 	return mentores
 }
 
-module.exports = {addUserData, getMentores}
+module.exports = {addUser, getMentores}
