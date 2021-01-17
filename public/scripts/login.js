@@ -1,10 +1,14 @@
 var indexBtn = document.querySelector("#return");
-var button = document.querySelector("#continue-button")
-loginLink = '/'
+var buttonLogin = document.querySelector("#continue-button")
+var loginAccountBtn = document.querySelector('#login-account-button')
+var createAccountBtn = document.querySelector("#create-account-button")
+
+var loginLink = '/'
+var isUser = true;
 
 const loginRequest = async (event) => {
 	const form = {
-		isUser: true,
+		isUser: isUser,
 		login: document.querySelector('#userlogin').value,
 		password: document.querySelector("#password").value
 	}
@@ -18,10 +22,15 @@ const loginRequest = async (event) => {
 	})
 }
 
-button.addEventListener('click',loginRequest)
+const changeToForm = (event) => {
+	document.querySelector("#signip-footer").hidden = !document.querySelector("#signip-footer").hidden 
+	document.querySelector("#login-footer").hidden = !document.querySelector("#login-footer").hidden
+}
 
+buttonLogin.addEventListener('click',loginRequest)
+
+createAccountBtn.addEventListener('click', changeToForm)
+loginAccountBtn.addEventListener('click', changeToForm)
 indexBtn.addEventListener("click", () =>{
     window.location.href = loginLink
 })
-
-
