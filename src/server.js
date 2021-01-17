@@ -3,7 +3,9 @@ const express = require ('express')
 const server = express()
 
 const {
-	home
+	home, 
+	pageLogin,
+	login
 	} = require('./pages.js')
 
 // Configura nunjucks (html render)
@@ -21,5 +23,7 @@ server
 .use(express.static("public"))
 // Rotas da aplicação
 .get("/", home)
+.get('/login', pageLogin)
+.post('/login', login)
 // start do servidor
 .listen(3000)
