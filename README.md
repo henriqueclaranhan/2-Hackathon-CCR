@@ -4,11 +4,11 @@
 
 # Telas
 ## Home
-[tela inicial do site](content/img/home_page.png)
+[tela inicial do site](blob/main/content/img/home_page.png)
 ## Login
-[tela de login do site](content/img/login_page.png)
+[tela de login do site](blob/main/content/img/login_page.png)
 ## Mentores
-[tela de listagem dos mentores](content/img/mentores_page.jpeg)
+[tela de listagem dos mentores](blob/main/content/img/mentores_page.jpeg)
 
 ## Versão Mobile
-[telas da versão mobile](content/img/telas_mobile.jpeg)
+[telas da versão mobile](blob/main/content/img/telas_mobile.jpeg)
