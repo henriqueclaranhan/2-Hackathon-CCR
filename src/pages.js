@@ -4,7 +4,7 @@ function home(req, res) {
 
 function pageLogin(req, res) {
 	// Ainda não o nome da pagina, então ficara essa por enquanto
-	res.render('page_name')
+	res.render('login.html')
 }
 
 function login(req, res) {
