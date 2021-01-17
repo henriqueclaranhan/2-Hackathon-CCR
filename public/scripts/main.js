@@ -1,5 +1,12 @@
+mentoredBtn = document.querySelector("#mentored-btn");
+mentoredLink = '/mentor'
+
+mentoredBtn.addEventListener("click", () =>{
+    window.location.href = mentoredLink
+})
+
 mentorBtn = document.querySelector("#mentor-btn");
-loginLink = '/login'
+mentorLink = '/login'
 
 mentorBtn.addEventListener("click", () =>{
     window.location.href = loginLink
