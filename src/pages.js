@@ -51,5 +51,6 @@ function login(req, res) {
 module.exports = {
 	home,
 	pageLogin,
-	login
+	login,
+	mentorPage
 };
