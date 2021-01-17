@@ -32,10 +32,10 @@ function userDataExist({user, email}) {
 	const queryResponseUser = db.find('/users', isUserUsed)
 
 	if(queryResponseEmail != undefined) {
-		return {is:true, what:'email'}
+		return {is:true, what:'email', userData: queryResponseEmail}
 	}
 	if (queryResponseUser != undefined) {
-		return {is:true, what'username'}
+		return {is:true, what'username', userData: queryResponseUser}
 	}
 
 	return {is:false, what: undefined}
@@ -55,11 +55,12 @@ function tryLogin({login, password}) {
 	const response = userDataExist(data)
 	
 	if (response.is) {
-		const hash = bcrypt.hashSync(password, saltRounds)
-		const match = await bcrypt.compare(password, hash);
+		const match = await bcrypt.compare(password, response.userData.password);
 
 		if (match) {
 			return {login: true}
+		}else{
+			return {error: 2, message: "Wrong password"}
 		}
 	}else{
 		return {error:0, message:'user not in database'}
@@ -73,4 +74,9 @@ function getMentores() {
 	return mentores
 }
 
-module.exports = {addUser, getMentores}
+module.exports = {
+	addUser, 
+	getMentores, 
+	tryLogin,
+	userDataExists
+};
