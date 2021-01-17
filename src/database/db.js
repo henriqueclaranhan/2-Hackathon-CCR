@@ -16,11 +16,47 @@ function addUser({name, user, email, password, tel, bio}) {
 
 	db.push(`/mentores[${lastAdd}]`, perfil)
 
-	bcrypt.hash(password, saltRounds, function(err, hash) {
-    	const user_login = {user, email, password: hash}
-    	db.push(`/users[${lastAdd}]`, user_login)
-	});
+	const hash = bcrypt.hashSync(password, saltRounds);
+	
+    const user_login = {user, email, password: hash}
+    db.push(`/users[${lastAdd}]`, user_login)
 
+}
+
+function userDataExist({user, email}) {
+
+	const isEmailUsed = (element) => element.email == email ;
+	const isUserUsed = (element) => element.user == user;
+
+	const queryResponseEmail = db.find('/users',  isEmailUsed)
+	const queryResponseUser = db.find('/users', isUserUsed)
+
+	if(queryResponseEmail != undefined) {
+		return {is:true, what:'email'}
+	}
+	if (queryResponseUser != undefined) {
+		return {is:true, what'username'}
+	}
+
+	return {is:false, what: undefined}
+}
+
+function tryLogin({login, password}) {
+	function isEmail(login) {
+		if(login.includes('@')){
+			return true
+		}
+		return false
+	}
+
+	const data = isEmail(login) ? {user: login}: {email: login} ;
+
+	const response = userDataExist(data)
+	
+	if (response.is) {
+		const match = await bcrypt.compare(password, user.passwordHash);
+	}
+	
 }
 
 function getMentores() {
