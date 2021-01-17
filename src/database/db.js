@@ -42,6 +42,7 @@ function userDataExist({user, email}) {
 }
 
 function tryLogin({login, password}) {
+
 	function isEmail(login) {
 		if(login.includes('@')){
 			return true
@@ -54,7 +55,14 @@ function tryLogin({login, password}) {
 	const response = userDataExist(data)
 	
 	if (response.is) {
-		const match = await bcrypt.compare(password, user.passwordHash);
+		const hash = bcrypt.hashSync(password, saltRounds)
+		const match = await bcrypt.compare(password, hash);
+
+		if (match) {
+			return {login: true}
+		}
+	}else{
+		return {error:0, message:'user not in database'}
 	}
 	
 }
