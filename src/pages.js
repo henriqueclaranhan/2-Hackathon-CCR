@@ -8,12 +8,16 @@ function pageLogin(req, res) {
 }
 
 function login(req, res) {
+	const db = require('./database/db.js')
 
 	if (req.body.isUser) {
 		const login_query = {
 			login: req.body.login,
 			password: req.body.password
 		}
+
+		db.
+
 	}else{
 
 		const data = {
@@ -25,12 +29,17 @@ function login(req, res) {
 			bio: req.body.bio
 		}
 
-		const db = require('./database/db.js')
+		const response = db.userDataExists({email: data.email, user: data.user})
 
-		db.addUser(data)
+		if (response.is) {
+			return res.status(200).json({error: 1, what:`${response.what}`, message:"some data is already in database"})
+		}else{
+			db.addUser(data)
+		}
+
 	}
 
-	return res.redirect('/mentorias')
+	return res.redirect('/login')
 }
 
 module.exports = {
