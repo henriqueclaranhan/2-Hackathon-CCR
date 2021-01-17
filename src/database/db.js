@@ -35,7 +35,7 @@ function userDataExist({user, email}) {
 		return {is:true, what:'email', userData: queryResponseEmail}
 	}
 	if (queryResponseUser != undefined) {
-		return {is:true, what'username', userData: queryResponseUser}
+		return {is:true, what:'username', userData: queryResponseUser}
 	}
 
 	return {is:false, what: undefined}
