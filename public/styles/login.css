@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F6F6;
+}
+#login-box{
+    position: fixed;
+    border-radius: 8px;
+    max-width: 350px;
+    max-height: 400px;
+    padding: 1.5rem;
+    background: #8d00ef;
+    box-shadow: 5px 5px 15px #290047c2;
+    transition: 0.25s ease-in-out;
+}
+#title{
+    color: white;
+    margin-bottom: 1rem;
+}
+#create-account, #create-account a{
+    color: white;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.input-field input{
+    background-color: #c779ffab;
+    color: white;
+    height: 30px;
+    padding: 6px;
+    border-radius: 1px;
+}
+#login-box div:not(:last-child){
+    margin-bottom: 4.5px;
+}
+.input-field input:focus{
+    outline-color: #d190ff;
+    outline-style: solid;
+    outline-width: medium;
+}
+::placeholder { 
+    color: white;
+    opacity: 1; 
+}
+:-ms-input-placeholder {
+    color: white;
+}
+::-ms-input-placeholder {
+    color: white;
+}
