@@ -4,11 +4,11 @@ O ShowHow se trata de uma plataforma em JS (Java Script) que tem como objetivo: 
 
 # Telas
 ## Home
-[tela inicial do site](content/imgs/home_page.png)
+![tela inicial do site](content/imgs/home_page.png)
 ## Login
-[tela de login do site](content/imgs/login_page.png)
+![tela de login do site](content/imgs/login_page.png)
 ## Mentores
-[tela de listagem dos mentores](content/imgs/mentores_page.jpeg)
+![tela de listagem dos mentores](content/imgs/mentores_page.jpeg)
 
 ## Versão Mobile
-[telas da versão mobile](content/imgs/telas_mobile.jpeg)
+![telas da versão mobile](content/imgs/telas_mobile.jpeg)
