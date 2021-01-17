@@ -6,12 +6,22 @@ var createAccountBtn = document.querySelector("#create-account-button")
 var loginLink = '/'
 var isUser = true;
 
-const loginRequest = async (event) => {
-	const form = {
+const getFormLogin = () => {
+	return {
 		isUser: isUser,
 		login: document.querySelector('#userlogin').value,
 		password: document.querySelector("#password").value
 	}
+}
+
+const getFormSignUp = () => {
+	return {
+		
+	}
+}
+
+const loginRequest = async (event) => {
+	const form = isUser ? getFormLogin() : getFormSignUp(); 
 
 	const response = await fetch('http://localhost:3000/login', {
 		method:'POST',
