@@ -5,7 +5,8 @@ const server = express()
 const {
 	home, 
 	pageLogin,
-	login
+	login,
+	mentorPage
 	} = require('./pages.js')
 
 // Configura nunjucks (html render)
@@ -25,5 +26,6 @@ server
 .get("/", home)
 .get('/login', pageLogin)
 .post('/login', login)
+.get('/mentor', mentorPage)
 // start do servidor
 .listen(3000)
