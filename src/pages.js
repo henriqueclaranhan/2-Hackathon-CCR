@@ -34,5 +34,7 @@ function login(req, res) {
 }
 
 module.exports = {
-	home
+	home,
+	pageLogin,
+	login
 };
