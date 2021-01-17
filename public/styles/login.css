@@ -16,15 +16,29 @@ body{
     justify-content: center;
     background-color: #F6F6F6;
 }
+#blob-top{
+    position: absolute;
+    top: -54vw;
+    left: -10vh; /*-12%;*/
+    width: 105%;
+    height: 30%;
+    transition: 0.s25s;
+    transform: rotate(48deg);
+}
 #login-box{
+    z-index: 2;
     position: fixed;
     border-radius: 8px;
     max-width: 350px;
     max-height: 400px;
     padding: 1.5rem;
-    background: #8d00ef;
+    background: #8546eb;
     box-shadow: 5px 5px 15px #290047c2;
     transition: 0.25s ease-in-out;
+}
+form{
+    display: flex;
+    flex-direction: column;
 }
 #title{
     color: white;
@@ -38,25 +52,56 @@ body{
 .input-field input{
     background-color: #c779ffab;
     color: white;
-    height: 30px;
-    padding: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    height: 40px;
+    padding-left: 8px;
     border-radius: 1px;
 }
 #login-box div:not(:last-child){
-    margin-bottom: 4.5px;
+    margin-bottom: 6.5px;
 }
+
 .input-field input:focus{
-    outline-color: #d190ff;
+    outline-color: #c779ff;
     outline-style: solid;
     outline-width: medium;
 }
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #c900fb7e inset !important;
+    -webkit-text-fill-color: white !important;
+}
 ::placeholder { 
     color: white;
-    opacity: 1; 
+    opacity: 80%;
+    font-weight: 400;
 }
 :-ms-input-placeholder {
     color: white;
+    
 }
 ::-ms-input-placeholder {
     color: white;
+}
+#login-box input[type="submit"]{
+    margin-top: 1rem;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 3px;
+    outline: none;
+    background-color: #3eb975;
+    color: white;
+    box-shadow: 0 0 8px #5b705dd2;
+}
+#blob-bottom{
+    position: absolute;
+    bottom: -65vw;
+    right: -25vh;
+    width: 125%;
+    height: 60%;
+    transition: 0.s25s;
+    transform: rotate(228deg);
 }
