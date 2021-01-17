@@ -19,11 +19,25 @@ body{
 #blob-top{
     position: absolute;
     top: -54vw;
-    left: -10vh; /*-12%;*/
+    left: -10vh;
     width: 105%;
     height: 30%;
     transition: 0.s25s;
     transform: rotate(48deg);
+}
+#return{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0rem;
+    left: 5px;
+    z-index: 1;
+    font-size: 50px;
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    color: white;
 }
 #login-box{
     z-index: 2;
@@ -46,7 +60,7 @@ form{
 }
 #create-account, #create-account a{
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 1rem;
 }
 .input-field input{
@@ -85,7 +99,8 @@ select:-webkit-autofill {
 ::-ms-input-placeholder {
     color: white;
 }
-#login-box input[type="submit"]{
+#login-box input[type="button"]{
+    cursor: pointer;
     margin-top: 1rem;
     padding: 0.4rem;
     font-size: 0.9rem;
