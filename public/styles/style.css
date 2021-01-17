@@ -42,8 +42,8 @@ header{
 }
 #app-name{
     margin-top: 9vh;
-    font-weight: 900;
-    font-family: 'Arial';
+    font-weight: 600;
+    font-family: 'Barlow Semi Condensed', sans-serif;
     text-shadow: 0 0 0 #8546eb, 2px 2px 5px #37225873;
     background: -webkit-linear-gradient(45deg, #8546eb, #8748ec);
     -webkit-background-clip: text;
@@ -51,9 +51,10 @@ header{
     margin-bottom: 0;
 }
 #motto{
+    margin-top: 26px;
     color: #6327c3;
-    font-weight: 450;
-    font-family: sans-serif;
+    font-weight: 500;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 #select-user-type-btns{
     z-index: 2;
@@ -65,7 +66,7 @@ header{
     margin: 0;
     bottom: 23%;
 }
-.user-type{
+.user-type-btns{
     width: 30rem;
     max-width: 250px;
     height: 10.4rem;
@@ -84,8 +85,22 @@ header{
     margin-right: 15px;
     background: #3eb975;
 }
-.user-type p{
+#mentored-btn img{
+    top: -1%;
+    width: 160px;
+    height: 130px;
+}
+#mentor-btn img{
+    top: 9%;
+    width: 143px;
+    height: 110px;
+}
+.user-type-btn-icon{
+    position: relative;
+}
+.user-type-btns p{
     font-size: 24px;
+    margin-bottom: 18px;
     font-weight: bolder;
     color: #F6F6F6;
     bottom: -8px;
