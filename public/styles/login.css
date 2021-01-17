@@ -119,6 +119,10 @@ select:-webkit-autofill {
     color: white;
     box-shadow: 0 0 8px #5b705dd2;
 }
+span{
+    cursor: pointer;
+    text-decoration: underline;
+}
 #blob-bottom{
     position: absolute;
     bottom: -65vw;
