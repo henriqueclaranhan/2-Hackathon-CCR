@@ -78,5 +78,5 @@ module.exports = {
 	addUser, 
 	getMentores, 
 	tryLogin,
-	userDataExists
+	userDataExist
 };
