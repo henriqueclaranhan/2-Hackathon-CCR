@@ -6,6 +6,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 body{
     width: 100%;
@@ -76,8 +83,8 @@ form{
 #login-box div:not(:last-child){
     margin-bottom: 6.5px;
 }
-
 .input-field input:focus{
+    transition: 0.25s ease;
     outline-color: #c779ff;
     outline-style: solid;
     outline-width: medium;
