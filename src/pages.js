@@ -2,6 +2,10 @@ function home(req, res) {
 	return res.render("index.html")
 }
 
+function mentorPage(req, res) {
+	return res.render('mentor.html')
+}
+
 function pageLogin(req, res) {
 	// Ainda não o nome da pagina, então ficara essa por enquanto
 	res.render('login.html')
