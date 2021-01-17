@@ -23,6 +23,7 @@ const loginRequest = async (event) => {
 }
 
 const changeToForm = (event) => {
+	isUser = !isUser
 	document.querySelector("#signip-footer").hidden = !document.querySelector("#signip-footer").hidden 
 	document.querySelector("#login-footer").hidden = !document.querySelector("#login-footer").hidden
 }
