@@ -38,6 +38,7 @@ body{
     width: 50px;
     height: 50px;
     color: white;
+    cursor: pointer;
 }
 #login-box{
     z-index: 2;
