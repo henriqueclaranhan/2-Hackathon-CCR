@@ -31,7 +31,7 @@ function login(req, res) {
 			bio: req.body.bio
 		}
 
-		const response = db.userDataExists({email: data.email, user: data.user})
+		const response = db.userDataExist({email: data.email, user: data.user})
 
 		if (response.is) {
 			return res.status(200).json({error: 1, what:`${response.what}`, message:"some data is already in database"})
