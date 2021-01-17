@@ -16,7 +16,7 @@ const getFormLogin = () => {
 
 const getFormSignUp = () => {
 	return {
-		
+
 	}
 }
 
@@ -36,6 +36,10 @@ const changeToForm = (event) => {
 	isUser = !isUser
 	document.querySelector("#signip-footer").hidden = !document.querySelector("#signip-footer").hidden 
 	document.querySelector("#login-footer").hidden = !document.querySelector("#login-footer").hidden
+
+	document.querySelectorAll('.input-field').forEach(input => {
+		input.hidden = !input.hidden 
+	})
 }
 
 buttonLogin.addEventListener('click',loginRequest)
