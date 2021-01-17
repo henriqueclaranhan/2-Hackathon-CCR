@@ -16,7 +16,9 @@ function login(req, res) {
 			password: req.body.password
 		}
 
-		db.
+		const response = db.tryLogin(login_query)
+
+		res.status(200).json(response)
 
 	}else{
 
