@@ -55,7 +55,7 @@ function tryLogin({login, password}) {
 	const response = userDataExist(data)
 	
 	if (response.is) {
-		const match = await bcrypt.compare(password, response.userData.password);
+		const match = bcrypt.compareSync(password, response.userData.password);
 
 		if (match) {
 			return {login: true}
