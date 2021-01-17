@@ -18,6 +18,8 @@ nunjucks.configure('src/views',{
 
 // Inicio e configurações do servidor
 server
+.use(express.json()) // for parsing application/json
+.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 // receber os dados do req.body
 .use(express.urlencoded({extended: true}))
 // Configurando rota dos arquivos estaticos
