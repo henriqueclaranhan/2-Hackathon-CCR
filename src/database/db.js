@@ -5,11 +5,16 @@ const initDb = require('./createShowHow.js')
 const db = new JsonDB(new Config("showhow", true, false, '/'));
 initDb(db)
 
-function addMentor(data) {
+function addUser({name, user, email, password, tel, bio}) {
 	// Get the new number to add
 	const lastAdd = db.getData('/mentores').length ;
 
-	db.push(`/mentores[${lastAdd}]`, data)
+	const user_login = {user, email, password}
+	const perfil = {name, bio, tel}
+
+	db.push(`/mentores[${lastAdd}]`, perfil)
+	db.push(`/users[${lastAdd}]`, user_login)
+
 }
 
 function getMentores() {
@@ -18,4 +23,4 @@ function getMentores() {
 	return mentores
 }
 
-module.exports = {addMentor, getMentores}
+module.exports = {addUserData, getMentores}
