@@ -22,7 +22,7 @@ function login(req, res) {
 
 		const response = db.tryLogin(login_query)
 
-		res.status(200).json(response)
+		return res.status(200).json(response)
 
 	}else{
 
