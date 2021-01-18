@@ -15,4 +15,4 @@ O ShowHow se trata de uma plataforma em NodeJS (Java Script) que tem como objeti
 ![tela de listagem dos mentores](content/imgs/mentores_page.jpeg)
 
 ## Versão Mobile
-![telas da versão mobile](content/imgs/telas_mobile.jpeg)
+![telas da versão mobile](content/imgs/all_pages.png)
