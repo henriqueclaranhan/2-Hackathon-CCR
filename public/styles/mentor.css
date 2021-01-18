@@ -14,7 +14,7 @@
         -ms-user-select: none;
             user-select: none;
 
-            -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 body{
     width: 100%;
@@ -138,4 +138,34 @@ header{
     background: #9871f5;
     margin-left: 9px;
     margin-right: 9px;
+}
+.mentor-card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+}
+.mentor-name{
+    margin-top: -8px
+}
+.mentor-bio{
+    border-radius: 6px;
+    padding: 5px;
+    background-color: #8143adab;
+    margin-top: 25px;
+}
+.mentor-card input[type="button"]{
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 3px;
+    outline: none;
+    background-color: #3eb975;
+    color: white;
+    box-shadow: 0 0 8px #5b705dd2;
+    position: absolute;
+    bottom: 25px;
 }
