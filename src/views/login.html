@@ -19,13 +19,35 @@
         <h2 id="title">Login</h2>
         <form action="">
             <div class="input-field">
-                <input type="text" name="userlogin" id="userlogin"
+                <input type="text" name="login" id="userlogin"
                     placeholder="Username ou e-mail" required>
             </div>
             <div class="input-field">
                 <input type="password" name="password" id="password"
                     placeholder="Senha" required>
             </div>
+            <!-- Another form -->
+            <div class="input-field" hidden>
+                <input type="text" name="name" id="name-input"
+                    placeholder="Nome" required>
+            </div>
+            <div class="input-field" hidden>
+                <input type="text" name="user" id="user-input"
+                    placeholder="Username" required>
+            </div>
+            <div class="input-field" hidden>
+                <input type="e-mail" name="userlogin" id="emai-input"
+                    placeholder="E-mail" required>
+            </div>
+            <div class="input-field" hidden>
+                <input type="tel" name="tel" id="tel-input"
+                    placeholder="Whastapp" required>
+            </div>
+            <div class="input-field" hidden>
+                <textarea type="text" name="tel" id="bio-input"
+                    placeholder="Bio" required></textarea>
+            </div>
+
             <input id="continue-button" type="button" value="Continuar">
         </form>
         <footer id="create-account">
