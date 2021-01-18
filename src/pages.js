@@ -3,8 +3,7 @@ function home(req, res) {
 }
 
 function mentorPage(req, res) {
-	const db = require('./database/db.js')
-	var mentors = db.getMentores().filter(mentor => mentor != {})
+	const mentors = require('./database/db.js').getMentores()
 
 	return res.render('mentor.html', {mentors})
 }
