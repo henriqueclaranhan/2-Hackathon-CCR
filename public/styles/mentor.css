@@ -6,17 +6,31 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+            -webkit-tap-highlight-color: transparent;
 }
 body{
     width: 100%;
     height: 100%;
-    position: fixed;
-    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     background-color: #F6F6F6;
+    padding-bottom: 250px;
+}
+#top-section{
+    z-index: 88;
+    display: fixed;
 }
 #blob-top{
+    z-index: 1;
     position: absolute;
     top: -54vw;
     left: -10vh;
@@ -40,12 +54,88 @@ body{
     color: white;
     cursor: pointer;
 }
-#blob-bottom{
+#top-section{
+    width: 100%;
+    height: 100px !important;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
     position: absolute;
-    bottom: -65vw;
-    right: -25vh;
-    width: 125%;
-    height: 60%;
-    transition: 0.s25s;
-    transform: rotate(228deg);
+    margin-top: 0;
+    top: 0;
+}
+#title{
+    margin-top: 2vh;
+    font-size: clamp(2.5rem, 9vw, 5rem); 
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    background: -webkit-linear-gradient(45deg, #8546eb, #8748ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#user-icon{
+    position: absolute;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	top: 10px;
+    right: 10px;
+	height: 50px;
+	width: 50px;
+	border: 4px solid #8546eb;
+	border-radius: 50%;
+}
+#user-icon::before{
+    content: "";
+    position: relative;
+    height: 10px;
+    width: 10px;
+    margin-bottom: 10px;
+	border: 3px solid #8546eb;
+	border-radius: 50%;
+}
+#user-icon::after{
+    content: "";
+    position: absolute;
+    bottom: 1.5px;
+    width: 20px;
+    height: 12px;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 110px;
+    border: 3px solid #8546eb;
+    border-bottom: 0;
+}
+#mentors-section{
+    z-index: 2;
+    position: absolute;
+    border-radius: 8px;
+    margin-left: 2%;
+    width: 96%;
+    margin-top: 10%;
+    min-height: 400px;
+    background: #3eb975;
+    box-shadow: 5px 5px 15px #1a4b307e;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#mentors-section .mentor-card{
+    border-radius: 8px;
+    z-index: 3;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 2rem;
+    height: 370px;
+    width: clamp(300px, 380px, 400px);
+    position: relative;
+    background: #9871f5;
+    margin-left: 9px;
+    margin-right: 9px;
 }
