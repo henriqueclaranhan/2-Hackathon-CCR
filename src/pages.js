@@ -3,7 +3,8 @@ function home(req, res) {
 }
 
 function mentorPage(req, res) {
-	return res.render('mentor.html')
+	const db = require('./database/db.js')
+	return res.render('mentor.html', db.getMentores())
 }
 
 function pageLogin(req, res) {
