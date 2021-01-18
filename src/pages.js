@@ -4,7 +4,9 @@ function home(req, res) {
 
 function mentorPage(req, res) {
 	const db = require('./database/db.js')
-	return res.render('mentor.html', db.getMentores())
+	var mentors = db.getMentores().filter(mentor => mentor != {})
+
+	return res.render('mentor.html', {mentors})
 }
 
 function pageLogin(req, res) {
