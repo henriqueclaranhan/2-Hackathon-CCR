@@ -36,6 +36,8 @@ const changeToForm = (event) => {
 	isUser = !isUser
 	document.querySelector("#signip-footer").hidden = !document.querySelector("#signip-footer").hidden 
 	document.querySelector("#login-footer").hidden = !document.querySelector("#login-footer").hidden
+	document.querySelector("#title").innerText = isUser?"Login": "Cadastro";
+
 
 	document.querySelectorAll('.input-field').forEach(input => {
 		input.hidden = !input.hidden 
