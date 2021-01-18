@@ -81,10 +81,28 @@ form{
     padding-left: 8px;
     border-radius: 1px;
 }
+.input-field textarea{
+    background-color: #c779ffab;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    height: 40px;
+    padding-left: 8px;
+    border-radius: 1px;
+
+    width: 280px; 
+    height: 135px;
+}
 #login-box div:not(:last-child){
     margin-bottom: 6.5px;
 }
 .input-field input:focus{
+    transition: 0.25s ease;
+    outline-color: #c779ff;
+    outline-style: solid;
+    outline-width: medium;
+}
+.input-field textarea:focus{
     transition: 0.25s ease;
     outline-color: #c779ff;
     outline-style: solid;
