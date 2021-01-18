@@ -2,7 +2,7 @@
   "name": "2-hackathon-ccr",
   "version": "1.0.0",
   "description": "Aplicação desenvolvida na segunda edição do hackathon da ccr 2021",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "node src/server.js",
     "dev": "nodemon src/server.js"
