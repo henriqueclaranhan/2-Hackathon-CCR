@@ -7,17 +7,33 @@ var loginLink = '/'
 var isUser = true;
 
 const getFormLogin = () => {
-	return {
-		isUser: isUser,
-		login: document.querySelector('#userlogin').value,
-		password: document.querySelector("#password").value
-	}
+	const data = getForm()
+	data.isUser = isUser
+
+	return data
+}
+
+const getForm = () => {
+	var inputsDiv = [] 
+	const data = {}
+
+	document.querySelectorAll('.input-field').forEach(div => {
+		if(!div.hidden){
+			inputsDiv.push(div)
+		}
+	})
+
+	inputsDiv.forEach(div => {
+		const input = div.children[0]
+
+		data[input.name] = input.value
+	})
+
+	return data
 }
 
 const getFormSignUp = () => {
-	return {
-
-	}
+	return getForm()
 }
 
 const loginRequest = async (event) => {
