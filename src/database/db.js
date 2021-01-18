@@ -16,7 +16,7 @@ function addUser({name, user, email, password, tel, bio}) {
 
 	db.push(`/mentores[${lastAdd}]`, perfil)
 
-	const hash = bcrypt.hashSync(password, saltRounds)
+	const hash = bcrypt.hashSync(password, saltRounds);
 
     const user_login = {user, email, password: hash}
     db.push(`/users[${lastAdd}]`, user_login)
